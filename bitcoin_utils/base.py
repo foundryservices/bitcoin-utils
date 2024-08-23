@@ -1,6 +1,3 @@
-from datetime import datetime
-from pytz import timezone
-
 import yfinance as yf
 from pandas import DataFrame
 
@@ -55,11 +52,5 @@ class BaseHelper():
         data.reset_index(inplace=True)
 
         return data
-
-    def get_est_time_now():
-        ny_timezone = timezone("America/New_York")
-        current_time_ny = datetime.now(ny_timezone)
-
-        return current_time_ny
 
 
